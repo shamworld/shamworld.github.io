@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>手写简易webpack | 码农机器人</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    <link rel="icon" href="/logo.jpg">
+    <meta name="description" content="努力向前">
+    
+    <link rel="preload" href="/assets/css/0.styles.b8d0645b.css" as="style"><link rel="preload" href="/assets/js/app.61a85b1c.js" as="script"><link rel="preload" href="/assets/js/2.6b359b12.js" as="script"><link rel="preload" href="/assets/js/113.a826b4ec.js" as="script"><link rel="prefetch" href="/assets/js/10.6bf522d2.js"><link rel="prefetch" href="/assets/js/100.a249a4e9.js"><link rel="prefetch" href="/assets/js/101.9d2465ad.js"><link rel="prefetch" href="/assets/js/102.5ea0ea92.js"><link rel="prefetch" href="/assets/js/103.ad073f03.js"><link rel="prefetch" href="/assets/js/104.afd1455c.js"><link rel="prefetch" href="/assets/js/105.5429d9b6.js"><link rel="prefetch" href="/assets/js/106.012719c5.js"><link rel="prefetch" href="/assets/js/107.fa002f10.js"><link rel="prefetch" href="/assets/js/108.9c70864a.js"><link rel="prefetch" href="/assets/js/109.ab6712ef.js"><link rel="prefetch" href="/assets/js/11.07adb038.js"><link rel="prefetch" href="/assets/js/110.3496849e.js"><link rel="prefetch" href="/assets/js/111.0708cccd.js"><link rel="prefetch" href="/assets/js/112.3ddda9ff.js"><link rel="prefetch" href="/assets/js/114.54f06bf1.js"><link rel="prefetch" href="/assets/js/115.68bd2270.js"><link rel="prefetch" href="/assets/js/116.0e283e33.js"><link rel="prefetch" href="/assets/js/117.10ca7c11.js"><link rel="prefetch" href="/assets/js/118.0f21544b.js"><link rel="prefetch" href="/assets/js/119.3d5cdaf0.js"><link rel="prefetch" href="/assets/js/12.6a633ec9.js"><link rel="prefetch" href="/assets/js/13.2e8873e5.js"><link rel="prefetch" href="/assets/js/14.0ea5ac55.js"><link rel="prefetch" href="/assets/js/15.d24d1240.js"><link rel="prefetch" href="/assets/js/16.bfb99431.js"><link rel="prefetch" href="/assets/js/17.0bf6db21.js"><link rel="prefetch" href="/assets/js/18.f6a16197.js"><link rel="prefetch" href="/assets/js/19.15b1e095.js"><link rel="prefetch" href="/assets/js/20.56746f5a.js"><link rel="prefetch" href="/assets/js/21.5019bb92.js"><link rel="prefetch" href="/assets/js/22.36a83eaf.js"><link rel="prefetch" href="/assets/js/23.c1d826fa.js"><link rel="prefetch" href="/assets/js/24.66437f58.js"><link rel="prefetch" href="/assets/js/25.b5ef9760.js"><link rel="prefetch" href="/assets/js/26.1e34c193.js"><link rel="prefetch" href="/assets/js/27.ea4375e5.js"><link rel="prefetch" href="/assets/js/28.8e440e91.js"><link rel="prefetch" href="/assets/js/29.ffd2070e.js"><link rel="prefetch" href="/assets/js/3.a6d8cb97.js"><link rel="prefetch" href="/assets/js/30.c1451f4e.js"><link rel="prefetch" href="/assets/js/31.a21ecc83.js"><link rel="prefetch" href="/assets/js/32.5d1de9ff.js"><link rel="prefetch" href="/assets/js/33.f9eef1d1.js"><link rel="prefetch" href="/assets/js/34.edb8fde2.js"><link rel="prefetch" href="/assets/js/35.6950ed93.js"><link rel="prefetch" href="/assets/js/36.b394a848.js"><link rel="prefetch" href="/assets/js/37.f11aa33f.js"><link rel="prefetch" href="/assets/js/38.e86bdf7f.js"><link rel="prefetch" href="/assets/js/39.dbc9c882.js"><link rel="prefetch" href="/assets/js/4.f3783df1.js"><link rel="prefetch" href="/assets/js/40.470a2b37.js"><link rel="prefetch" href="/assets/js/41.bcffb885.js"><link rel="prefetch" href="/assets/js/42.484ee502.js"><link rel="prefetch" href="/assets/js/43.2a86b409.js"><link rel="prefetch" href="/assets/js/44.2b684e4d.js"><link rel="prefetch" href="/assets/js/45.4e6fb818.js"><link rel="prefetch" href="/assets/js/46.86268f46.js"><link rel="prefetch" href="/assets/js/47.84f7cda3.js"><link rel="prefetch" href="/assets/js/48.fd78be04.js"><link rel="prefetch" href="/assets/js/49.f5a6fc1e.js"><link rel="prefetch" href="/assets/js/5.892f2cf8.js"><link rel="prefetch" href="/assets/js/50.29919944.js"><link rel="prefetch" href="/assets/js/51.c1b5918c.js"><link rel="prefetch" href="/assets/js/52.c4ad64f8.js"><link rel="prefetch" href="/assets/js/53.df154372.js"><link rel="prefetch" href="/assets/js/54.4fee1b96.js"><link rel="prefetch" href="/assets/js/55.18c6e9f2.js"><link rel="prefetch" href="/assets/js/56.d5569485.js"><link rel="prefetch" href="/assets/js/57.9eb74b69.js"><link rel="prefetch" href="/assets/js/58.c8b7968e.js"><link rel="prefetch" href="/assets/js/59.a208d99c.js"><link rel="prefetch" href="/assets/js/6.a9a81823.js"><link rel="prefetch" href="/assets/js/60.c0f7048b.js"><link rel="prefetch" href="/assets/js/61.e06e2c12.js"><link rel="prefetch" href="/assets/js/62.3726a0b9.js"><link rel="prefetch" href="/assets/js/63.53a81692.js"><link rel="prefetch" href="/assets/js/64.ba6af384.js"><link rel="prefetch" href="/assets/js/65.2f165ffa.js"><link rel="prefetch" href="/assets/js/66.8c0a983a.js"><link rel="prefetch" href="/assets/js/67.74bf1c32.js"><link rel="prefetch" href="/assets/js/68.27c15e0b.js"><link rel="prefetch" href="/assets/js/69.5b78d6fb.js"><link rel="prefetch" href="/assets/js/7.a9e85c97.js"><link rel="prefetch" href="/assets/js/70.4772f9bd.js"><link rel="prefetch" href="/assets/js/71.2a2e89e4.js"><link rel="prefetch" href="/assets/js/72.3debedf0.js"><link rel="prefetch" href="/assets/js/73.c9ee93ce.js"><link rel="prefetch" href="/assets/js/74.7ec9495c.js"><link rel="prefetch" href="/assets/js/75.8c828ff5.js"><link rel="prefetch" href="/assets/js/76.986dc0d7.js"><link rel="prefetch" href="/assets/js/77.7e7e3c8e.js"><link rel="prefetch" href="/assets/js/78.200d9828.js"><link rel="prefetch" href="/assets/js/79.ee6b28e9.js"><link rel="prefetch" href="/assets/js/8.448002b9.js"><link rel="prefetch" href="/assets/js/80.93d03d67.js"><link rel="prefetch" href="/assets/js/81.eebcba15.js"><link rel="prefetch" href="/assets/js/82.3b0bb838.js"><link rel="prefetch" href="/assets/js/83.75234d18.js"><link rel="prefetch" href="/assets/js/84.1a897e55.js"><link rel="prefetch" href="/assets/js/85.8267b168.js"><link rel="prefetch" href="/assets/js/86.a7557c20.js"><link rel="prefetch" href="/assets/js/87.4f7e77b3.js"><link rel="prefetch" href="/assets/js/88.9b41f10e.js"><link rel="prefetch" href="/assets/js/89.662b9425.js"><link rel="prefetch" href="/assets/js/9.804860d0.js"><link rel="prefetch" href="/assets/js/90.6d84e2d8.js"><link rel="prefetch" href="/assets/js/91.650a7b6f.js"><link rel="prefetch" href="/assets/js/92.8568032c.js"><link rel="prefetch" href="/assets/js/93.0c300b40.js"><link rel="prefetch" href="/assets/js/94.f7ce23ff.js"><link rel="prefetch" href="/assets/js/95.e6c8272f.js"><link rel="prefetch" href="/assets/js/96.8f51c3ac.js"><link rel="prefetch" href="/assets/js/97.9cc683f5.js"><link rel="prefetch" href="/assets/js/98.6af1269f.js"><link rel="prefetch" href="/assets/js/99.97a09de8.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.b8d0645b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/logo.jpg" alt="码农机器人" class="logo"> <span class="site-name can-hide">码农机器人</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/note/" class="nav-link router-link-active">
+  博客
+</a></div><div class="nav-item"><a href="/react/" class="nav-link">
+  react
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/note/" class="nav-link router-link-active">
+  博客
+</a></div><div class="nav-item"><a href="/react/" class="nav-link">
+  react
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>建立前端知识体系</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Vue源码分析</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>提效赋能 前端工程化篇</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>程序员PLUS篇</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>JavaScript设计模式</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>HTTP</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>webpack</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/note/webpacks/webpack.html" class="sidebar-link">webpack</a></li><li><a href="/note/webpacks/webpack运行流程.html" class="sidebar-link">webpack运行流程</a></li><li><a href="/note/webpacks/webpack从入门到精通一.html" class="sidebar-link">webpack从入门到精通(一)</a></li><li><a href="/note/webpacks/webpack从入门到精通二.html" class="sidebar-link">webpack从入门到精通(二)</a></li><li><a href="/note/webpacks/webpack从入门到精通三.html" class="sidebar-link">webpack从入门到精通(三)</a></li><li><a href="/note/webpacks/webpack从入门到精通四.html" class="sidebar-link">webpack从入门到精通(四)</a></li><li><a href="/note/webpacks/webpack从入门到精通四.html" class="sidebar-link">webpack从入门到精通(四)</a></li><li><a href="/note/webpacks/webpack4源码.html" class="sidebar-link">webpack4源码</a></li><li><a href="/note/webpacks/手写简易webpack.html" class="active sidebar-link">手写简易webpack</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/note/webpacks/手写简易webpack.html#核心打包原理" class="sidebar-link">核心打包原理</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/note/webpacks/手写简易webpack.html#打包工作的流程如下" class="sidebar-link">打包工作的流程如下:</a></li><li class="sidebar-sub-header"><a href="/note/webpacks/手写简易webpack.html#具体细节" class="sidebar-link">具体细节</a></li></ul></li><li class="sidebar-sub-header"><a href="/note/webpacks/手写简易webpack.html#代码实现和分析" class="sidebar-link">代码实现和分析</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/note/webpacks/手写简易webpack.html#实现bundle-js" class="sidebar-link">实现bundle.js</a></li></ul></li><li class="sidebar-sub-header"><a href="/note/webpacks/手写简易webpack.html#依赖图谱生成" class="sidebar-link">依赖图谱生成</a></li><li class="sidebar-sub-header"><a href="/note/webpacks/手写简易webpack.html#生成代码" class="sidebar-link">生成代码</a></li></ul></li><li><a href="/note/webpacks/webpack性能优化.html" class="sidebar-link">webpack性能优化</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>性能优化</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Flutter</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>知识点</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>忍者秘籍书</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="手写简易webpack"><a href="#手写简易webpack" class="header-anchor">#</a> 手写简易webpack</h1> <h2 id="核心打包原理"><a href="#核心打包原理" class="header-anchor">#</a> 核心打包原理</h2> <h3 id="打包工作的流程如下"><a href="#打包工作的流程如下" class="header-anchor">#</a> 打包工作的流程如下:</h3> <ol><li>需要读到入口文件里的内容</li> <li>分析入口文件，递归的去读取模块所依赖的文件内容，生成AST语法树</li> <li>根据AST语法树，生成浏览器能够运行的最终代码</li></ol> <h3 id="具体细节"><a href="#具体细节" class="header-anchor">#</a> 具体细节</h3> <ol><li>获取主模块内容</li> <li>分析模块内容
+<ul><li>安装@babel/parser包(转AST)</li></ul></li> <li>对模块内容处理
+<ul><li>安装@babel/traverse包(遍历AST)</li> <li>安装@babel/core和@babel/preset-env包(ES6转ES5)</li></ul></li> <li>递归处理所有模块</li> <li>生成最终代码</li></ol> <h2 id="代码实现和分析"><a href="#代码实现和分析" class="header-anchor">#</a> 代码实现和分析</h2> <p>整个项目目录如下，其中src下的文件是bundle.js需要打包的代码。</p> <div class="language-js extra-class"><pre class="language-js"><code>├── bundle<span class="token punctuation">.</span>js
+├── <span class="token keyword">package</span><span class="token punctuation">.</span>json
+└── src
+    ├── add<span class="token punctuation">.</span>js
+    ├── index<span class="token punctuation">.</span>js
+    └── minus<span class="token punctuation">.</span>js
+</code></pre></div><p>src下各文件内容如下:</p> <p>add.js</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">(</span><span class="token parameter">a<span class="token punctuation">,</span>b</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> a<span class="token operator">+</span>b<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>minus.js</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token function-variable function">minus</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">a<span class="token punctuation">,</span>b</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> a<span class="token operator">-</span>b<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>index.js</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> add <span class="token keyword">from</span> <span class="token string">'./add.js'</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span>minus<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./minus.js'</span>
+
+<span class="token keyword">const</span> num <span class="token operator">=</span> <span class="token function">add</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> division <span class="token operator">=</span> <span class="token function">minus</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>division<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="实现bundle-js"><a href="#实现bundle-js" class="header-anchor">#</a> 实现bundle.js</h3> <p>读取文件内容</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> fs <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'fs'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token function-variable function">moduleAnalyser</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">fileName</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+    <span class="token comment">// 1.fs模块根据路径读取到了module的内容</span>
+    <span class="token keyword">const</span> content <span class="token operator">=</span> fs<span class="token punctuation">.</span><span class="token function">readFileSync</span><span class="token punctuation">(</span>fileName<span class="token punctuation">,</span><span class="token string">'utf-8'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>content<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token function">moduleAnalyser</span><span class="token punctuation">(</span><span class="token string">'./src/index.js'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>打印如下:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> add <span class="token keyword">from</span> <span class="token string">'./add.js'</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span>minus<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./minus.js'</span>
+
+<span class="token keyword">const</span> num <span class="token operator">=</span> <span class="token function">add</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> division <span class="token operator">=</span> <span class="token function">minus</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>division<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>接下来我们需要把文件内容转出ast语法树，安装<code>@babel/parser</code>，通过<code>npm install @babel/parser</code>，引入<code>@babel/parser</code>:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> fs <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'fs'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> parser <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'@babel/parser'</span><span class="token punctuation">)</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">moduleAnalyser</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">fileName</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+    <span class="token comment">// 1.fs模块根据路径读取到了module的内容</span>
+    <span class="token keyword">const</span> content <span class="token operator">=</span> fs<span class="token punctuation">.</span><span class="token function">readFileSync</span><span class="token punctuation">(</span>fileName<span class="token punctuation">,</span><span class="token string">'utf-8'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// 2.使用@babel/parser将文件内容转换成抽象语法树AST</span>
+    <span class="token keyword">const</span> ast <span class="token operator">=</span> parser<span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>content<span class="token punctuation">,</span><span class="token punctuation">{</span>
+        <span class="token literal-property property">sourceType</span><span class="token operator">:</span><span class="token string">'module'</span><span class="token comment">//表示我们要解析的是es6模块</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>ast<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token function">moduleAnalyser</span><span class="token punctuation">(</span><span class="token string">'./src/index.js'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><details><summary><mark><font color="darkred">输出</font></mark></summary> <pre><code>  
+Node {
+  type: 'File',
+  start: 0,
+  end: 376,
+  loc: SourceLocation {
+    start: Position { line: 1, column: 0 },
+    end: Position { line: 21, column: 0 },
+    filename: undefined,
+    identifierName: undefined
+  },
+  range: undefined,
+  leadingComments: undefined,
+  trailingComments: undefined,
+  innerComments: undefined,
+  extra: undefined,
+  errors: [],
+  program: Node {
+    type: 'Program',
+    start: 0,
+    end: 376,
+    loc: SourceLocation {
+      start: [Position],
+      end: [Position],
+      filename: undefined,
+      identifierName: undefined
+    },
+    range: undefined,
+    leadingComments: undefined,
+    trailingComments: undefined,
+    innerComments: undefined,
+    extra: undefined,
+    sourceType: 'module',
+    interpreter: null,
+    body: [ [Node], [Node], [Node], [Node], [Node], [Node] ],
+    directives: []
+  },
+  comments: [
+    {
+      type: 'CommentBlock',
+      value: '',
+      start: 0,
+      end: 226,
+      loc: [SourceLocation]
+    }
+  ]
+}
+  </code></pre></details> <p>我们需要拿到program下的body内容：</p> <details><summary><mark><font color="darkred">输出</font></mark></summary> <pre><code>  
+[
+  Node {
+    type: 'ImportDeclaration',
+    start: 227,
+    end: 250,
+    loc: SourceLocation {
+      start: [Position],
+      end: [Position],
+      filename: undefined,
+      identifierName: undefined
+    },
+    range: undefined,
+    leadingComments: [ [Object] ],
+    trailingComments: undefined,
+    innerComments: undefined,
+    extra: undefined,
+    specifiers: [ [Node] ],
+    source: Node {
+      type: 'StringLiteral',
+      start: 243,
+      end: 250,
+      loc: [SourceLocation],
+      range: undefined,
+      leadingComments: undefined,
+      trailingComments: undefined,
+      innerComments: undefined,
+      extra: [Object],
+      value: './add.js'
+    }
+  },
+  Node {
+    type: 'ImportDeclaration',
+    start: 251,
+    end: 280,
+    loc: SourceLocation {
+      start: [Position],
+      end: [Position],
+      filename: undefined,
+      identifierName: undefined
+    },
+    range: undefined,
+    leadingComments: undefined,
+    trailingComments: undefined,
+    innerComments: undefined,
+    extra: undefined,
+    specifiers: [ [Node] ],
+    source: Node {
+      type: 'StringLiteral',
+      start: 271,
+      end: 280,
+      loc: [SourceLocation],
+      range: undefined,
+      leadingComments: undefined,
+      trailingComments: undefined,
+      innerComments: undefined,
+      extra: [Object],
+      value: './minus.js'
+    }
+  },
+  Node {
+    type: 'VariableDeclaration',
+    start: 282,
+    end: 303,
+    loc: SourceLocation {
+      start: [Position],
+      end: [Position],
+      filename: undefined,
+      identifierName: undefined
+    },
+    range: undefined,
+    leadingComments: undefined,
+    trailingComments: undefined,
+    innerComments: undefined,
+    extra: undefined,
+    declarations: [ [Node] ],
+    kind: 'const'
+  },
+  Node {
+    type: 'VariableDeclaration',
+    start: 304,
+    end: 332,
+    loc: SourceLocation {
+      start: [Position],
+      end: [Position],
+      filename: undefined,
+      identifierName: undefined
+    },
+    range: undefined,
+    leadingComments: undefined,
+    trailingComments: undefined,
+    innerComments: undefined,
+    extra: undefined,
+    declarations: [ [Node] ],
+    kind: 'const'
+  },
+  Node {
+    type: 'ExpressionStatement',
+    start: 334,
+    end: 351,
+    loc: SourceLocation {
+      start: [Position],
+      end: [Position],
+      filename: undefined,
+      identifierName: undefined
+    },
+    range: undefined,
+    leadingComments: undefined,
+    trailingComments: undefined,
+    innerComments: undefined,
+    extra: undefined,
+    expression: Node {
+      type: 'CallExpression',
+      start: 334,
+      end: 350,
+      loc: [SourceLocation],
+      range: undefined,
+      leadingComments: undefined,
+      trailingComments: undefined,
+      innerComments: undefined,
+      extra: undefined,
+      callee: [Node],
+      arguments: [Array]
+    }
+  },
+  Node {
+    type: 'ExpressionStatement',
+    start: 352,
+    end: 374,
+    loc: SourceLocation {
+      start: [Position],
+      end: [Position],
+      filename: undefined,
+      identifierName: undefined
+    },
+    range: undefined,
+    leadingComments: undefined,
+    trailingComments: undefined,
+    innerComments: undefined,
+    extra: undefined,
+    expression: Node {
+      type: 'CallExpression',
+      start: 352,
+      end: 373,
+      loc: [SourceLocation],
+      range: undefined,
+      leadingComments: undefined,
+      trailingComments: undefined,
+      innerComments: undefined,
+      extra: undefined,
+      callee: [Node],
+      arguments: [Array]
+    }
+  }
+]
+  </code></pre></details> <p>这时候我们看到，我们需要遍历拿到node下面source里面的value路径，然后拼接成路径，这时候我们需要借助<code>@babel/traverse</code>来循环处理ast，<code>npm install @babel/traverse</code>:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> fs <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'fs'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'path'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> parser <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'@babel/parser'</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> traverse <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'@babel/traverse'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>default<span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">moduleAnalyser</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">fileName</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+    <span class="token comment">// 1.fs模块根据路径读取到了module的内容</span>
+    <span class="token keyword">const</span> content <span class="token operator">=</span> fs<span class="token punctuation">.</span><span class="token function">readFileSync</span><span class="token punctuation">(</span>fileName<span class="token punctuation">,</span><span class="token string">'utf-8'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// 2.使用@babel/parser将文件内容转换成抽象语法树AST</span>
+    <span class="token keyword">const</span> ast <span class="token operator">=</span> parser<span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>content<span class="token punctuation">,</span><span class="token punctuation">{</span>
+        <span class="token literal-property property">sourceType</span><span class="token operator">:</span><span class="token string">'module'</span><span class="token comment">//表示我们要解析的是es6模块</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token comment">//3.使用@babel/traverse遍历AST，对每个ImportDeclaration节点做映射，把依赖关系拼接在dependencies对象里</span>
+    <span class="token keyword">let</span> dependencies <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token function">traverse</span><span class="token punctuation">(</span>ast<span class="token punctuation">,</span><span class="token punctuation">{</span>
+        <span class="token function">ImportDeclaration</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span>node<span class="token punctuation">}</span></span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">const</span> dirName <span class="token operator">=</span> path<span class="token punctuation">.</span><span class="token function">dirname</span><span class="token punctuation">(</span>fileName<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">const</span> newFile <span class="token operator">=</span> <span class="token string">&quot;./&quot;</span> <span class="token operator">+</span> path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>dirName<span class="token punctuation">,</span>node<span class="token punctuation">.</span>source<span class="token punctuation">.</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token comment">// key是相对于当前模块的路径，value为相对于bundler.js的路径。</span>
+            dependencies<span class="token punctuation">[</span>node<span class="token punctuation">.</span>source<span class="token punctuation">.</span>value<span class="token punctuation">]</span> <span class="token operator">=</span> newFile<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>dependencies<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token function">moduleAnalyser</span><span class="token punctuation">(</span><span class="token string">'./src/index.js'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>这时候我们打印dependencies结果是<code>{ './add.js': './src/add.js', './minus.js': './src/minus.js' }</code>，这时候我们就把依赖模块的路径拿到了。</p> <p>接下来就是需要把AST转换成浏览器可以执行的代码,这时候我们需要借助<code>@babel/core</code>和<code>@babel/preset-env</code>,<code>npm install @babel/core @babel/preset-env</code></p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> fs <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'fs'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'path'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> parser <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'@babel/parser'</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> traverse <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'@babel/traverse'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>default<span class="token punctuation">;</span>
+<span class="token keyword">const</span> babel <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'@babel/core'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">moduleAnalyser</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">fileName</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+    <span class="token comment">// 1.fs模块根据路径读取到了module的内容</span>
+    <span class="token keyword">const</span> content <span class="token operator">=</span> fs<span class="token punctuation">.</span><span class="token function">readFileSync</span><span class="token punctuation">(</span>fileName<span class="token punctuation">,</span><span class="token string">'utf-8'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// 2.使用@babel/parser将文件内容转换成抽象语法树AST</span>
+    <span class="token keyword">const</span> ast <span class="token operator">=</span> parser<span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>content<span class="token punctuation">,</span><span class="token punctuation">{</span>
+        <span class="token literal-property property">sourceType</span><span class="token operator">:</span><span class="token string">'module'</span><span class="token comment">//表示我们要解析的是es6模块</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token comment">//3.使用@babel/traverse遍历AST，对每个ImportDeclaration节点做映射，把依赖关系拼接在dependencies对象里</span>
+    <span class="token keyword">let</span> dependencies <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token function">traverse</span><span class="token punctuation">(</span>ast<span class="token punctuation">,</span><span class="token punctuation">{</span>
+        <span class="token function">ImportDeclaration</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span>node<span class="token punctuation">}</span></span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">const</span> dirName <span class="token operator">=</span> path<span class="token punctuation">.</span><span class="token function">dirname</span><span class="token punctuation">(</span>fileName<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">const</span> newFile <span class="token operator">=</span> <span class="token string">&quot;./&quot;</span> <span class="token operator">+</span> path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>dirName<span class="token punctuation">,</span>node<span class="token punctuation">.</span>source<span class="token punctuation">.</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token comment">// key是相对于当前模块的路径，value为相对于bundler.js的路径。</span>
+            dependencies<span class="token punctuation">[</span>node<span class="token punctuation">.</span>source<span class="token punctuation">.</span>value<span class="token punctuation">]</span> <span class="token operator">=</span> newFile<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">//4.使用@babel/core和@babel/preset-env讲ast转换成浏览器可以执行的代码</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span>code<span class="token punctuation">}</span> <span class="token operator">=</span> babel<span class="token punctuation">.</span><span class="token function">transformFromAst</span><span class="token punctuation">(</span>ast<span class="token punctuation">,</span><span class="token keyword">null</span><span class="token punctuation">,</span><span class="token punctuation">{</span>
+        <span class="token literal-property property">presets</span><span class="token operator">:</span><span class="token punctuation">[</span><span class="token string">&quot;@babel/preset-env&quot;</span><span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+        fileName<span class="token punctuation">,</span>
+        dependencies<span class="token punctuation">,</span>
+        code
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">moduleAnalyser</span><span class="token punctuation">(</span><span class="token string">'./src/index.js'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>模块分析流程图如下：
+<img src="/webpacks/20200922153129521.png" alt=""></p> <p>调用console.log(moduleAnalyser('./src/index.js'))，可以在控制台打印出以下内容:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token punctuation">{</span>
+  <span class="token literal-property property">fileName</span><span class="token operator">:</span> <span class="token string">'./src/index.js'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">dependencies</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token string-property property">'./add.js'</span><span class="token operator">:</span> <span class="token string">'./src/add.js'</span><span class="token punctuation">,</span> <span class="token string-property property">'./minus.js'</span><span class="token operator">:</span> <span class="token string">'./src/minus.js'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">code</span><span class="token operator">:</span> <span class="token string">'&quot;use strict&quot;;\n'</span> <span class="token operator">+</span>
+    <span class="token string">'\n'</span> <span class="token operator">+</span>
+    <span class="token string">'var _add = _interopRequireDefault(require(&quot;./add&quot;));\n'</span> <span class="token operator">+</span>
+    <span class="token string">'\n'</span> <span class="token operator">+</span>
+    <span class="token string">'var _minus = require(&quot;./minus&quot;);\n'</span> <span class="token operator">+</span>
+    <span class="token string">'\n'</span> <span class="token operator">+</span>
+    <span class="token string">'function _interopRequireDefault(obj) { return obj &amp;&amp; obj.__esModule ? obj : { &quot;default&quot;: obj }; }\n'</span> <span class="token operator">+</span>
+    <span class="token string">'var num = (0, _add[&quot;default&quot;])(1, 2);\n'</span> <span class="token operator">+</span>
+    <span class="token string">'var division = (0, _minus.minus)(2, 1);\n'</span> <span class="token operator">+</span>
+    <span class="token string">'console.log(num);\n'</span> <span class="token operator">+</span>
+    <span class="token string">'console.log(division);'</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>执行moduleAnalyser(module)，可以返回module的fileName,dependencies,code信息。注意在code里， <strong>import语法已经变成一个require函数了，export语法，也变成了在给一个exports变量赋值。</strong></p> <h2 id="依赖图谱生成"><a href="#依赖图谱生成" class="header-anchor">#</a> 依赖图谱生成</h2> <p>调用moduleAnalyser('./src/index.js')拿到入口文件的dependencies映射，接下来再把入口文件的依赖路径再一次做模块分析，再把依赖模块的依赖路径再一次做模块分析...其实就是广度优先遍历，我们可以很轻松得到这次打包所有需要的模块的分析结果。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> fs <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'fs'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'path'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> parser <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'@babel/parser'</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> traverse <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'@babel/traverse'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>default<span class="token punctuation">;</span>
+<span class="token keyword">const</span> babel <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'@babel/core'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">moduleAnalyser</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">fileName</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+    <span class="token comment">// 1.fs模块根据路径读取到了module的内容</span>
+    <span class="token keyword">const</span> content <span class="token operator">=</span> fs<span class="token punctuation">.</span><span class="token function">readFileSync</span><span class="token punctuation">(</span>fileName<span class="token punctuation">,</span><span class="token string">'utf-8'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// 2.使用@babel/parser将文件内容转换成抽象语法树AST</span>
+    <span class="token keyword">const</span> ast <span class="token operator">=</span> parser<span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>content<span class="token punctuation">,</span><span class="token punctuation">{</span>
+        <span class="token literal-property property">sourceType</span><span class="token operator">:</span><span class="token string">'module'</span><span class="token comment">//表示我们要解析的是es6模块</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token comment">//3.使用@babel/traverse遍历AST，对每个ImportDeclaration节点做映射，把依赖关系拼接在dependencies对象里</span>
+    <span class="token keyword">let</span> dependencies <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token function">traverse</span><span class="token punctuation">(</span>ast<span class="token punctuation">,</span><span class="token punctuation">{</span>
+        <span class="token function">ImportDeclaration</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span>node<span class="token punctuation">}</span></span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">const</span> dirName <span class="token operator">=</span> path<span class="token punctuation">.</span><span class="token function">dirname</span><span class="token punctuation">(</span>fileName<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">const</span> newFile <span class="token operator">=</span> <span class="token string">&quot;./&quot;</span> <span class="token operator">+</span> path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>dirName<span class="token punctuation">,</span>node<span class="token punctuation">.</span>source<span class="token punctuation">.</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token comment">// key是相对于当前模块的路径，value为相对于bundler.js的路径。</span>
+            dependencies<span class="token punctuation">[</span>node<span class="token punctuation">.</span>source<span class="token punctuation">.</span>value<span class="token punctuation">]</span> <span class="token operator">=</span> newFile<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">//4.使用@babel/core和@babel/preset-env讲ast转换成浏览器可以执行的代码</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span>code<span class="token punctuation">}</span> <span class="token operator">=</span> babel<span class="token punctuation">.</span><span class="token function">transformFromAst</span><span class="token punctuation">(</span>ast<span class="token punctuation">,</span><span class="token keyword">null</span><span class="token punctuation">,</span><span class="token punctuation">{</span>
+        <span class="token literal-property property">presets</span><span class="token operator">:</span><span class="token punctuation">[</span><span class="token string">&quot;@babel/preset-env&quot;</span><span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+        fileName<span class="token punctuation">,</span>
+        dependencies<span class="token punctuation">,</span>
+        code
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//生成依赖图谱</span>
+<span class="token keyword">const</span> <span class="token function-variable function">makeDependenciesGraph</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">entry</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token comment">//entryModule:入口文件的dependencies映射</span>
+    <span class="token keyword">const</span> entryModule <span class="token operator">=</span> <span class="token function">moduleAnalyser</span><span class="token punctuation">(</span>entry<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">//graphArray:图谱动态数组，初始只有一个元素entryModule</span>
+    <span class="token keyword">const</span> graphArray <span class="token operator">=</span> <span class="token punctuation">[</span>entryModule<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>graphArray<span class="token punctuation">.</span>length<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">const</span> item <span class="token operator">=</span> graphArray<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token comment">//dependencies:当前模块的dependencies映射</span>
+        <span class="token keyword">const</span> <span class="token punctuation">{</span>dependencies<span class="token punctuation">}</span> <span class="token operator">=</span> item<span class="token punctuation">;</span>
+        <span class="token comment">//如果当前模块有依赖文件，则遍历dependencies，调用moduleAnalyser,对依赖文件进行模块分析</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>dependencies<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> key <span class="token keyword">in</span> dependencies<span class="token punctuation">)</span><span class="token punctuation">{</span>
+                graphArray<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token function">moduleAnalyser</span><span class="token punctuation">(</span>dependencies<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">//graph:遍历graphArray生成便利于打包使用的graph。其中key未fileName,value为dependencies和code</span>
+    <span class="token keyword">const</span> graph <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    graphArray<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token parameter">item</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+        graph<span class="token punctuation">[</span>item<span class="token punctuation">.</span>fileName<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+            <span class="token literal-property property">dependencies</span><span class="token operator">:</span>item<span class="token punctuation">.</span>dependencies<span class="token punctuation">,</span>
+            <span class="token literal-property property">code</span><span class="token operator">:</span>item<span class="token punctuation">.</span>code
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>graph<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> graph<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token function">makeDependenciesGraph</span><span class="token punctuation">(</span><span class="token string">'./src/index.js'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>调用makeDependenciesGraph('./src/index.js'),控制台打印:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token punctuation">{</span>
+  <span class="token string-property property">'./src/index.js'</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">dependencies</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token string-property property">'./add.js'</span><span class="token operator">:</span> <span class="token string">'./src/add.js'</span><span class="token punctuation">,</span> <span class="token string-property property">'./minus.js'</span><span class="token operator">:</span> <span class="token string">'./src/minus.js'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">code</span><span class="token operator">:</span> <span class="token string">'&quot;use strict&quot;;\n'</span> <span class="token operator">+</span>
+      <span class="token string">'\n'</span> <span class="token operator">+</span>
+      <span class="token string">'var _add = _interopRequireDefault(require(&quot;./add.js&quot;));\n'</span> <span class="token operator">+</span>
+      <span class="token string">'\n'</span> <span class="token operator">+</span>
+      <span class="token string">'var _minus = require(&quot;./minus.js&quot;);\n'</span> <span class="token operator">+</span>
+      <span class="token string">'\n'</span> <span class="token operator">+</span>
+      <span class="token string">'function _interopRequireDefault(obj) { return obj &amp;&amp; obj.__esModule ? obj : { &quot;default&quot;: obj }; }\n'</span> <span class="token operator">+</span>
+      <span class="token string">'\n'</span> <span class="token operator">+</span>
+      <span class="token string">'var num = (0, _add[&quot;default&quot;])(1, 2);\n'</span> <span class="token operator">+</span>
+      <span class="token string">'var division = (0, _minus.minus)(2, 1);\n'</span> <span class="token operator">+</span>
+      <span class="token string">'console.log(num);\n'</span> <span class="token operator">+</span>
+      <span class="token string">'console.log(division);'</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token string-property property">'./src/add.js'</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">dependencies</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">code</span><span class="token operator">:</span> <span class="token string">'&quot;use strict&quot;;\n'</span> <span class="token operator">+</span>
+      <span class="token string">'\n'</span> <span class="token operator">+</span>
+      <span class="token string">'Object.defineProperty(exports, &quot;__esModule&quot;, {\n'</span> <span class="token operator">+</span>
+      <span class="token string">'  value: true\n'</span> <span class="token operator">+</span>
+      <span class="token string">'});\n'</span> <span class="token operator">+</span>
+      <span class="token string">'exports[&quot;default&quot;] = void 0;\n'</span> <span class="token operator">+</span>
+      <span class="token string">'\n'</span> <span class="token operator">+</span>
+      <span class="token string">'var _default = function _default(a, b) {\n'</span> <span class="token operator">+</span>
+      <span class="token string">'  return a + b;\n'</span> <span class="token operator">+</span>
+      <span class="token string">'};\n'</span> <span class="token operator">+</span>
+      <span class="token string">'\n'</span> <span class="token operator">+</span>
+      <span class="token string">'exports[&quot;default&quot;] = _default;'</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token string-property property">'./src/minus.js'</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">dependencies</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">code</span><span class="token operator">:</span> <span class="token string">'&quot;use strict&quot;;\n'</span> <span class="token operator">+</span>
+      <span class="token string">'\n'</span> <span class="token operator">+</span>
+      <span class="token string">'Object.defineProperty(exports, &quot;__esModule&quot;, {\n'</span> <span class="token operator">+</span>
+      <span class="token string">'  value: true\n'</span> <span class="token operator">+</span>
+      <span class="token string">'});\n'</span> <span class="token operator">+</span>
+      <span class="token string">'exports.minus = void 0;\n'</span> <span class="token operator">+</span>
+      <span class="token string">'\n'</span> <span class="token operator">+</span>
+      <span class="token string">'var minus = function minus(a, b) {\n'</span> <span class="token operator">+</span>
+      <span class="token string">'  return a - b;\n'</span> <span class="token operator">+</span>
+      <span class="token string">'};\n'</span> <span class="token operator">+</span>
+      <span class="token string">'\n'</span> <span class="token operator">+</span>
+      <span class="token string">'exports.minus = minus;'</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>生成一栏图谱流程图如下:</p> <p><img src="/webpacks/20200922155610825.png" alt=""></p> <p>看到这是不是很熟悉了，这就是我们打包dist的之后，删除eval和多余的代码后的函数自执行代码里面的代码。<a href="/note/webpacks/webpack4源码.html">详情请看</a></p> <h2 id="生成代码"><a href="#生成代码" class="header-anchor">#</a> 生成代码</h2> <p>我们需要开始生成最终课运行的代码了。在上文&quot;模块分析&quot;部分，我们知道@babel/core和@babel/preset-env生成的浏览器课执行代码里，import语法已经变成一个require函数了，export语法，也变成了在给一个exports变量赋值。所以我们的&quot;生成代码&quot;部分，需要提供一个require函数和exports对象。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">//generateCode 根据依赖图谱生成浏览器可执行的代码</span>
+<span class="token keyword">const</span> <span class="token function-variable function">generateCode</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">entry</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+    <span class="token comment">//根据entry,调用makeDependenciesGraph生成依赖图谱graph</span>
+    <span class="token keyword">const</span> graph <span class="token operator">=</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span><span class="token function">makeDependenciesGraph</span><span class="token punctuation">(</span>entry<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">//根据依赖图谱生成浏览器可执行代码</span>
+    <span class="token keyword">return</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
+    (function(graph){
+        // todo
+      })(</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>graph<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">)
+    </span><span class="token template-punctuation string">`</span></span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>为了不污染全局作用域，我们使用立即执行函数来包装我们的代码，将依赖图谱graph作为参数传入。</p> <p>在graph中找到入口文件的code，并运行它:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">return</span> `
+  <span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">graph</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">function</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token parameter">module</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+      <span class="token function">eval</span><span class="token punctuation">(</span>graph<span class="token punctuation">[</span>module<span class="token punctuation">]</span><span class="token punctuation">.</span>code<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'${entry}'</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span>$<span class="token punctuation">{</span>graph<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+</code></pre></div><p>在入口文件的code，我们同样需要调用require去获取依赖模块，模块导出的对象exports，所以require函数必须有导出对象，还要支持内部调用require函数。但是注意!!次require并非在声明的require函数，定义code内部使用的require函数-&gt;localRequire。因为我们观察之前编译出的代码，可以知道在code中，require函数传的参数是相对于当前module的相对路径，但是我们打包生成可运行代码时，需要的是相对于bundle.js的相对路径。这时候，我们之前给每个module存的dependencies映射再次派上了用场，localRequire()传入依赖相对于module的相对路径，根据graph对象，返回依赖相对于bundle.js的相对路径。</p> <div class="language-js extra-class"><pre class="language-js"><code> <span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">graph</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">function</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token parameter">module</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">function</span> <span class="token function">localRequire</span><span class="token punctuation">(</span><span class="token parameter">relativePath</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token function">require</span><span class="token punctuation">(</span>graph<span class="token punctuation">[</span>module<span class="token punctuation">]</span><span class="token punctuation">.</span>dependencies<span class="token punctuation">[</span>relativePath<span class="token punctuation">]</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">var</span> exports <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+        <span class="token function">eval</span><span class="token punctuation">(</span>graph<span class="token punctuation">[</span>module<span class="token punctuation">]</span><span class="token punctuation">.</span>code<span class="token punctuation">)</span>
+        <span class="token keyword">return</span> exports<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'${entry}'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span>$<span class="token punctuation">{</span>graph<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>为了防止模块内部变量污染其他模块，我们在eval外面包一层立即执行函数，讲localRequire,exports和code作为参数传入。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">graph</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">function</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token parameter">module</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">function</span> <span class="token function">localRequire</span><span class="token punctuation">(</span><span class="token parameter">relativePath</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token function">require</span><span class="token punctuation">(</span>graph<span class="token punctuation">[</span>module<span class="token punctuation">]</span><span class="token punctuation">.</span>dependencies<span class="token punctuation">[</span>relativePath<span class="token punctuation">]</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">var</span> exports <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+        <span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">require<span class="token punctuation">,</span>exports<span class="token punctuation">,</span>code</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token function">eval</span><span class="token punctuation">(</span>code<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span>localRequire<span class="token punctuation">,</span>exports<span class="token punctuation">,</span>graph<span class="token punctuation">[</span>module<span class="token punctuation">]</span><span class="token punctuation">.</span>code<span class="token punctuation">)</span>
+        <span class="token keyword">return</span> exports<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'${entry}'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span>$<span class="token punctuation">{</span>graph<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>由此一个bundle就写完了，最终生成的代码，也是可以直接在浏览器中运行的。
+调用console.log(generateCode('./src/index.js'))，可以在控制台打印出以下内容：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">graph</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">function</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token parameter">module</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">function</span> <span class="token function">localRequire</span><span class="token punctuation">(</span><span class="token parameter">relativePath</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token function">require</span><span class="token punctuation">(</span>graph<span class="token punctuation">[</span>module<span class="token punctuation">]</span><span class="token punctuation">.</span>dependencies<span class="token punctuation">[</span>relativePath<span class="token punctuation">]</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">var</span> exports <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+        <span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">require<span class="token punctuation">,</span>exports<span class="token punctuation">,</span>code</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token function">eval</span><span class="token punctuation">(</span>code<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span>localRequire<span class="token punctuation">,</span>exports<span class="token punctuation">,</span>graph<span class="token punctuation">[</span>module<span class="token punctuation">]</span><span class="token punctuation">.</span>code<span class="token punctuation">)</span>
+        <span class="token keyword">return</span> exports<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./src/index.js'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string-property property">&quot;./src/index.js&quot;</span><span class="token operator">:</span><span class="token punctuation">{</span><span class="token string-property property">&quot;dependencies&quot;</span><span class="token operator">:</span><span class="token punctuation">{</span><span class="token string-property property">&quot;./add.js&quot;</span><span class="token operator">:</span><span class="token string">&quot;./src/add.js&quot;</span><span class="token punctuation">,</span><span class="token string-property property">&quot;./minus.js&quot;</span><span class="token operator">:</span><span class="token string">&quot;./src/minus.js&quot;</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token string-property property">&quot;code&quot;</span><span class="token operator">:</span><span class="token string">&quot;\&quot;use strict\&quot;;\n\nvar _add = _interopRequireDefault(require(\&quot;./add.js\&quot;));\n\nvar _minus = require(\&quot;./minus.js\&quot;);\n\nfunction _interopRequireDefault(obj) { return obj &amp;&amp; obj.__esModule ? obj : { \&quot;default\&quot;: obj }; }\n\nvar num = (0, _add[\&quot;default\&quot;])(1, 2);\nvar division = (0, _minus.minus)(2, 1);\nconsole.log(num);\nconsole.log(division);&quot;</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token string-property property">&quot;./src/add.js&quot;</span><span class="token operator">:</span><span class="token punctuation">{</span><span class="token string-property property">&quot;dependencies&quot;</span><span class="token operator">:</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token string-property property">&quot;code&quot;</span><span class="token operator">:</span><span class="token string">&quot;\&quot;use strict\&quot;;\n\nObject.defineProperty(exports, \&quot;__esModule\&quot;, {\n  value: true\n});\nexports[\&quot;default\&quot;] = void 0;\n\nvar _default = function _default(a, b) {\n  return a + b;\n};\n\nexports[\&quot;default\&quot;] = _default;&quot;</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token string-property property">&quot;./src/minus.js&quot;</span><span class="token operator">:</span><span class="token punctuation">{</span><span class="token string-property property">&quot;dependencies&quot;</span><span class="token operator">:</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token string-property property">&quot;code&quot;</span><span class="token operator">:</span><span class="token string">&quot;\&quot;use strict\&quot;;\n\nObject.defineProperty(exports, \&quot;__esModule\&quot;, {\n  value: true\n});\nexports.minus = void 0;\n\nvar minus = function minus(a, b) {\n  return a - b;\n};\n\nexports.minus = minus;&quot;</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>把代码复制到浏览器发现正常输出:</p> <p><img src="/webpacks/1611560676293.jpg" alt=""></p> <p>最后一步，就是把文件打包到dist目录下:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> content <span class="token operator">=</span> <span class="token function">generateCode</span><span class="token punctuation">(</span><span class="token string">'./src/index.js'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">//写入到dist目录下</span>
+fs<span class="token punctuation">.</span><span class="token function">mkdirSync</span><span class="token punctuation">(</span><span class="token string">'./dist'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+fs<span class="token punctuation">.</span><span class="token function">writeFileSync</span><span class="token punctuation">(</span><span class="token string">'./dist/bundle.js'</span><span class="token punctuation">,</span>content<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>执行<code>node bundle.js</code> 文件被打进dist目录下。</p> <p>完整bundle.js代码如下:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> fs <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'fs'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'path'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> parser <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'@babel/parser'</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> traverse <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'@babel/traverse'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>default<span class="token punctuation">;</span>
+<span class="token keyword">const</span> babel <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'@babel/core'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">moduleAnalyser</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">fileName</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+    <span class="token comment">// 1.fs模块根据路径读取到了module的内容</span>
+    <span class="token keyword">const</span> content <span class="token operator">=</span> fs<span class="token punctuation">.</span><span class="token function">readFileSync</span><span class="token punctuation">(</span>fileName<span class="token punctuation">,</span><span class="token string">'utf-8'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// 2.使用@babel/parser将文件内容转换成抽象语法树AST</span>
+    <span class="token keyword">const</span> ast <span class="token operator">=</span> parser<span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>content<span class="token punctuation">,</span><span class="token punctuation">{</span>
+        <span class="token literal-property property">sourceType</span><span class="token operator">:</span><span class="token string">'module'</span><span class="token comment">//表示我们要解析的是es6模块</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token comment">//3.使用@babel/traverse遍历AST，对每个ImportDeclaration节点做映射，把依赖关系拼接在dependencies对象里</span>
+    <span class="token keyword">let</span> dependencies <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token function">traverse</span><span class="token punctuation">(</span>ast<span class="token punctuation">,</span><span class="token punctuation">{</span>
+        <span class="token function">ImportDeclaration</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span>node<span class="token punctuation">}</span></span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">const</span> dirName <span class="token operator">=</span> path<span class="token punctuation">.</span><span class="token function">dirname</span><span class="token punctuation">(</span>fileName<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">const</span> newFile <span class="token operator">=</span> <span class="token string">&quot;./&quot;</span> <span class="token operator">+</span> path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>dirName<span class="token punctuation">,</span>node<span class="token punctuation">.</span>source<span class="token punctuation">.</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token comment">// key是相对于当前模块的路径，value为相对于bundler.js的路径。</span>
+            dependencies<span class="token punctuation">[</span>node<span class="token punctuation">.</span>source<span class="token punctuation">.</span>value<span class="token punctuation">]</span> <span class="token operator">=</span> newFile<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">//4.使用@babel/core和@babel/preset-env讲ast转换成浏览器可以执行的代码</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span>code<span class="token punctuation">}</span> <span class="token operator">=</span> babel<span class="token punctuation">.</span><span class="token function">transformFromAst</span><span class="token punctuation">(</span>ast<span class="token punctuation">,</span><span class="token keyword">null</span><span class="token punctuation">,</span><span class="token punctuation">{</span>
+        <span class="token literal-property property">presets</span><span class="token operator">:</span><span class="token punctuation">[</span><span class="token string">&quot;@babel/preset-env&quot;</span><span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+        fileName<span class="token punctuation">,</span>
+        dependencies<span class="token punctuation">,</span>
+        code
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//生成依赖图谱</span>
+<span class="token keyword">const</span> <span class="token function-variable function">makeDependenciesGraph</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">entry</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token comment">//entryModule:入口文件的dependencies映射</span>
+    <span class="token keyword">const</span> entryModule <span class="token operator">=</span> <span class="token function">moduleAnalyser</span><span class="token punctuation">(</span>entry<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">//graphArray:图谱动态数组，初始只有一个元素entryModule</span>
+    <span class="token keyword">const</span> graphArray <span class="token operator">=</span> <span class="token punctuation">[</span>entryModule<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>graphArray<span class="token punctuation">.</span>length<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">const</span> item <span class="token operator">=</span> graphArray<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token comment">//dependencies:当前模块的dependencies映射</span>
+        <span class="token keyword">const</span> <span class="token punctuation">{</span>dependencies<span class="token punctuation">}</span> <span class="token operator">=</span> item<span class="token punctuation">;</span>
+        <span class="token comment">//如果当前模块有依赖文件，则遍历dependencies，调用moduleAnalyser,对依赖文件进行模块分析</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>dependencies<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> key <span class="token keyword">in</span> dependencies<span class="token punctuation">)</span><span class="token punctuation">{</span>
+                graphArray<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token function">moduleAnalyser</span><span class="token punctuation">(</span>dependencies<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">//graph:遍历graphArray生成便利于打包使用的graph。其中key未fileName,value为dependencies和code</span>
+    <span class="token keyword">const</span> graph <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    graphArray<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token parameter">item</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+        graph<span class="token punctuation">[</span>item<span class="token punctuation">.</span>fileName<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+            <span class="token literal-property property">dependencies</span><span class="token operator">:</span>item<span class="token punctuation">.</span>dependencies<span class="token punctuation">,</span>
+            <span class="token literal-property property">code</span><span class="token operator">:</span>item<span class="token punctuation">.</span>code
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> graph<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//generateCode 根据依赖图谱生成浏览器可执行的代码</span>
+<span class="token keyword">const</span> <span class="token function-variable function">generateCode</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">entry</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+    <span class="token comment">//根据entry,调用makeDependenciesGraph生成依赖图谱graph</span>
+    <span class="token keyword">const</span> graph <span class="token operator">=</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span><span class="token function">makeDependenciesGraph</span><span class="token punctuation">(</span>entry<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">//根据依赖图谱生成浏览器可执行代码</span>
+    <span class="token keyword">return</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
+    (function(graph){
+        function require(module){
+            function localRequire(relativePath){
+                return require(graph[module].dependencies[relativePath])
+            }
+            var exports = {};
+           (function(require,exports,code){
+                eval(code)
+           })(localRequire,exports,graph[module].code)
+            return exports;
+        }
+        require('</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>entry<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">');
+      })(</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>graph<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">)
+    </span><span class="token template-punctuation string">`</span></span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> content <span class="token operator">=</span> <span class="token function">generateCode</span><span class="token punctuation">(</span><span class="token string">'./src/index.js'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">//写入到dist目录下</span>
+fs<span class="token punctuation">.</span><span class="token function">mkdirSync</span><span class="token punctuation">(</span><span class="token string">'./dist'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+fs<span class="token punctuation">.</span><span class="token function">writeFileSync</span><span class="token punctuation">(</span><span class="token string">'./dist/bundle.js'</span><span class="token punctuation">,</span>content<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">更新时间:</span> <span class="time">8/25/2021, 3:56:53 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/note/webpacks/webpack4源码.html" class="prev">
+        webpack4源码
+      </a></span> <span class="next"><a href="/note/webpacks/webpack性能优化.html">
+        webpack性能优化
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><div id="live2d-widget" class="live2d-widget-container" style="position:fixed;right:65px;bottom:0px;width:135px;height:300px;z-index:99999;opacity:0.8;pointer-events:none;"><canvas id="live2d_canvas" width="135" height="300" class="live2d_canvas" style="position:absolute;left:0px;top:0px;width:135px;height:300px;"></canvas></div></div></div>
+    <script src="/assets/js/app.61a85b1c.js" defer></script><script src="/assets/js/2.6b359b12.js" defer></script><script src="/assets/js/113.a826b4ec.js" defer></script>
+  </body>
+</html>
